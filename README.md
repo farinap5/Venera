@@ -5,5 +5,6 @@
 
 <p align="center">
   <img src="img/vnrmm.jpg" width="500" title="hover text">
+  <h3>The idea</h3>
 </p>
 
