@@ -4,7 +4,6 @@
 ---
 
 <p align="center">
-  <img src="img/vnrmm.jpg" width="350" title="hover text">
+  <img src="img/vnrmm.jpg" width="500" title="hover text">
 </p>
 
-![](img/vnrmm.jpg)
