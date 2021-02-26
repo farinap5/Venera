@@ -5,7 +5,6 @@
 
 <p align="center">
   <img src="img/vnrmm.jpg" width="350" title="hover text">
-  <img src="img/vnrmm.jpg" width="350" alt="accessibility text">
 </p>
 
 ![](img/vnrmm.jpg)
