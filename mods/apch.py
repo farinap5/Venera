@@ -59,7 +59,7 @@ def apache_def_enum(url,header):
 def apache_(urlht,header):
     h = requester.req_header(urlht,header)
     if "Apache" or "apache" in h["Server"]:
-        print("\n[\033[1;34mInfo\033[0;0m] - Server: Appache")
+        print("\n[\033[1;34mInfo\033[0;0m] - Server: Apache")
         apache_about(urlht,header)
 
         url = urlht

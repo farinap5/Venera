@@ -1,6 +1,17 @@
 import requests
 import re
 
+
+def stur(urlht, header):
+    paths = ['sitemap.xml','wp-admin/admin-ajax.php','wp-login.php','robots.txt','xmlrpc.php','wp-admin/install.php',
+             'readme.html','license.txt','licencia.txt']
+    for ru in paths:
+        ret = urlht + "/" + ru
+        req = requests.get(ret, headers=header)
+        if req.status_code == 200 or 301:
+            print("[\033[1;33m!\033[0;0m]", ret)
+        else:
+            pass
 def findbu(urlht,header):
     backups = ['wp-config.php~', 'wp-config.php.txt', 'wp-config.php.save', '.wp-config.php.swp', 'wp-config.php.swp',
                'wp-config.php.swo', 'wp-config.php_bak', 'wp-config.bak', 'wp-config.php.bak', 'wp-config.save',
@@ -81,6 +92,7 @@ def wp(urlht,header):
         findbu(urlht,header)
         uenum(urlht,header)
         getplugs(urlht,header)
+        stur(urlht,header)
         gethemes(urlht,header)
         getver(urlht,header)
         print("---------------------------")

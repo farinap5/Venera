@@ -10,6 +10,9 @@ from mods import bootstrap
 from mods import dnsfuzz
 from mods import requester
 from mods import apch
+from mods import errorsing
+from mods import bup
+from mods import phpinfo
 def main(url,urlht,ver):
 
     time1 = time.time()
@@ -20,12 +23,13 @@ def main(url,urlht,ver):
     chckurl.check(urlht,header)
     chckwaf.checkwaf(urlht,header)
     multi_index.multi_index(url,header)
+    errorsing.errorsig(url,header)
     hdrchck.header(urlht,header)
     wp.wp(urlht,header)
     bootstrap.bootstrap(urlht,header)
     dnsfuzz.dnsfuzz(url,header)
     apch.apache_(urlht,header)
-
+    bup.backup(url,header)
 
 
     time2 = time.time()
