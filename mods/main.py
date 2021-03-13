@@ -13,6 +13,7 @@ from mods import apch
 from mods import errorsing
 from mods import bup
 from mods import phpinfo
+from mods import gitexp
 def main(url,urlht,ver):
 
     time1 = time.time()
@@ -30,6 +31,7 @@ def main(url,urlht,ver):
     dnsfuzz.dnsfuzz(url,header)
     apch.apache_(urlht,header)
     bup.backup(url,header)
+    gitexp.git_exposed(url,header)
 
 
     time2 = time.time()
