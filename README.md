@@ -1,6 +1,7 @@
 <h1 align="center">Venera</h1>
+<img src="img/venera4.png" width="150" title="hover text" align="center">
 <h4 align="center">Pre Alpha</h4>
-<img src="img/venera4.png" width="100" title="hover text">
+
 ---
 
 ### The Idea
