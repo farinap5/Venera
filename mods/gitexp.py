@@ -3,7 +3,7 @@ from mods import requester
 
 def git_exposed(url, header):
     founds = []
-    path = ["git",".git",".git/",".gitignore",".git/logs/",".git/HEAD",".git/logs/HEAD",".git/index",".git/config"]
+    path = [".git",".git/",".gitignore",".git/logs/",".git/HEAD",".git/logs/HEAD",".git/index",".git/config"]
 
     for i in path:
         urlht = url + "/" + i

@@ -1,18 +1,14 @@
 import time
-from mods import help
 from mods import banner
 from mods import chckurl
 from mods import chckwaf
 from mods import multi_index
 from mods import hdrchck
-from mods import wp
-from mods import bootstrap
+from mods.cms import bootstrap, wp, jmla
 from mods import dnsfuzz
-from mods import requester
 from mods import apch
 from mods import errorsing
 from mods import bup
-from mods import phpinfo
 from mods import gitexp
 def main(url,urlht,ver):
 
@@ -26,8 +22,11 @@ def main(url,urlht,ver):
     multi_index.multi_index(url,header)
     errorsing.errorsig(url,header)
     hdrchck.header(urlht,header)
-    wp.wp(urlht,header)
-    bootstrap.bootstrap(urlht,header)
+
+    wp.wp(urlht, header)
+    bootstrap.bootstrap(urlht, header)
+    jmla.joomla(urlht,header)
+
     dnsfuzz.dnsfuzz(url,header)
     apch.apache_(urlht,header)
     bup.backup(url,header)
